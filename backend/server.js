@@ -4,6 +4,7 @@ import { usersRoutes } from './routes/usersRoutes.js'
 import mongoose from 'mongoose'
 
 const app  = express();
+const port = process.env.PORT || 4000
 
 app.use(express.json());
 
@@ -15,7 +16,7 @@ app.use('/api/users', usersRoutes);
 mongoose.connect(process.env.DB_URI, { dbName: 'demo_db'})
     .then(()=>{ 
     console.log("connected to DB successfully");
-    app.listen(10000, 'localhost', () => console.log("Listening to port 4000"));
+    app.listen(port, 'localhost', () => console.log(`Listening to port ${port}`));
 })
 .catch((err) => console.log(err));
 
