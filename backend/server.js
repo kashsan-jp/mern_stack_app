@@ -15,7 +15,7 @@ app.use('/api/users', usersRoutes);
 mongoose.connect(process.env.DB_URI, { dbName: 'demo_db'})
     .then(()=>{ 
     console.log("connected to DB successfully");
-    app.listen(4000, 'localhost', () => console.log("Listening to port 4000"));
+    app.listen(10000, 'localhost', () => console.log("Listening to port 4000"));
 })
 .catch((err) => console.log(err));
 
