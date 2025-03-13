@@ -14,10 +14,11 @@ export default defineConfig({
   server: {
     proxy: {
       '/api' :{
-        //target: "http://localhost:4000",
+        // target: "http://localhost:3000",
         //target: import.meta.env.VITE_BACKEND_URL,
         target: "https://mern-stack-app-backend-z7ka.onrender.com",
-        changeOrigin: true
+        changeOrigin: true,
+        //origin: "http://0.0.0.8080",
       }
     }
   }
