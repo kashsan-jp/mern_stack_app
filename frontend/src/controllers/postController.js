@@ -41,7 +41,7 @@
             "Content-Type": "application/json",
             "Authorization": `Bearer ${localStorage.getItem("token")}`
         },
-        body: JSON.stringify({ title, body }),
+        body: JSON.parse(JSON.stringify({ title, body })),
         });
 
         const data = await res.json()
