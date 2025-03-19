@@ -10,7 +10,7 @@ const loginUser = async( email, password ) => {
         headers: {
             'Content-Type' : 'application/json',
         },
-        body: JSON.parse(JSON.stringify({email, password})),
+        body: JSON.stringify({email, password}),
     })
 
     const data = await res.json()
@@ -42,7 +42,7 @@ const registerUser = async(email, password, passwordConfirm) => {
         headers: {
             'Content-Type' : 'application/json'
         },
-        body: JSON.parse(JSON.stringify({email, password}))
+        body: JSON.stringify({email, password}),
     })
 
     const data = await res.json()
