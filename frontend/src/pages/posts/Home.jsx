@@ -17,9 +17,9 @@ function Home() {
         setTimeout( async() => { 
             const data = await getPosts();
             //Update posts state
-            setPosts(data.posts)
+            setPosts(data.posts);
             // Remove the loading
-            setLoading(false)
+            setLoading(false);
             console.log(data);
         },1000);
     },[]) 
@@ -33,7 +33,7 @@ function Home() {
             <i className="fa-solid fa-spinner animate-spin text-3xl text-center block ml-50"></i>
         )}
 
-        { posts && posts.map((post) => <div key={posts._id}>
+        {posts && posts.map((post) => <div key={posts._id}>
             <Post post={post}/>
         </div>)}
     </section>
