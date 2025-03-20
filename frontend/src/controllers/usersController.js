@@ -13,16 +13,16 @@ const loginUser = async( email, password ) => {
         body: JSON.stringify({email, password}),
     })
 
-    const data = await res.json()
+    const data = await res.json();
 
     if(!res.ok)
     {
-        throw Error(data.error)
+        throw Error(data.error);
     }
     //console.log(data);
 
-    localStorage.setItem('token', data.token)
-    localStorage.setItem('email', data.email)
+    localStorage.setItem('token', data.token);
+    localStorage.setItem('email', data.email);
 
     return data;
 };
