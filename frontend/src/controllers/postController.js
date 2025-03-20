@@ -1,7 +1,7 @@
  /**************** Get all posts *****************/
 
  const getPosts = async() => {
-    const res = await fetch('/api/post');
+    const res = await fetch('/api/posts');
     const data = await res.json();
 
     if(!res.ok) {
