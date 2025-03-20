@@ -13,7 +13,7 @@
 
   /**************** Get user posts *****************/
   const getUserPosts = async() => {
-    const res = await fetch("/api/posts/user", {
+    const res = await fetch("/api/posts/user/", {
         headers: {
             "Authorization": `Bearer ${localStorage.getItem("token")}`
             
@@ -35,7 +35,7 @@
         throw Error('All fields are required')
     }
 
-    const res = await fetch('/api/posts', {
+    const res = await fetch('/api/posts/', {
         method: 'POST',
         headers: {
             "Content-Type": "application/json",
