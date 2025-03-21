@@ -29,9 +29,9 @@ function Home() {
     <section className='card'>
         <h1 className='title'>Latest posts</h1>
 
-        {loading && (
+        {/* {loading && (
             <i className="fa-solid fa-spinner animate-spin text-3xl text-center block ml-50"></i>
-        )}
+        )} */}
 
         {posts && posts.map((post) => <div key={posts._id}>
             <Post post={post}/>
