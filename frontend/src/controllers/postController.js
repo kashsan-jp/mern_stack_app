@@ -5,7 +5,7 @@
     const data = await res.json();
 
     if(!res.ok) {
-        throw Error(data.error);
+        throw Error(data.error || null);
     }
 
     return data;
